@@ -99,10 +99,22 @@ fun ImageAndLogin(){
             .padding(bottom = 50.dp),
             contentAlignment = Alignment.Center
         ){
-            Text(text = "Login")
+            Text(
+                text = "Login",
+                fontWeight = FontWeight.Bold,
+                color = Color(0x00000000)
+            )
         }
 
         LoginTextField()
+
+        Text(
+            text = "Forgotten password",
+            fontSize = 15.sp,
+            color = Color(0xFF0000FF),
+            modifier = Modifier
+                .padding(bottom = 8.dp)
+        )
 
         OutlinedButton(
             onClick = { "Do something here"},
@@ -110,7 +122,7 @@ fun ImageAndLogin(){
             elevation = ButtonDefaults.elevation(8.dp)
         ){
             Text(
-                text = "Forgotten password",
+                text = "Sign in",
                 modifier = Modifier.padding(12.dp)
             )
         }
@@ -143,6 +155,7 @@ fun LoginTextField(){
             maxLines = 1,
             textStyle = TextStyle(color = Color(0xFF000000)),
             modifier = Modifier
+                .clip(RoundedCornerShape(8.dp))
                 .padding(bottom = 8.dp, top = 8.dp)
                 .background(color = Color(0xFFFFFFFF))
         )
@@ -156,6 +169,7 @@ fun LoginTextField(){
             maxLines = 1,
             textStyle = TextStyle(color = Color(0xFF000000)),
             modifier = Modifier
+                .clip(RoundedCornerShape(8.dp))
                 .padding(top = 8.dp)
                 .background(color = Color(0xFFFFFFFF))
 
